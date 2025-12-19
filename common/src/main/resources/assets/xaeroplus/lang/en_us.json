@@ -1,4 +1,6 @@
 {
+  "xaeroplus.setting.night_mode": "Night Mode",
+  "xaeroplus.setting.night_mode.tooltip": "Makes the map appear darker like in the night when in the Overworld",
   "xaeroplus.setting.transparent_worldmap_background": "Transparent Background",
   "xaeroplus.setting.transparent_worldmap_background.tooltip": "Renders a transparent background on the WorldMap instead of black",
   "xaeroplus.setting.fps_limiter": "Minimap FPS Limiter",

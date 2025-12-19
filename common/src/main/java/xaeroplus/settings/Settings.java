@@ -30,6 +30,12 @@ public final class Settings extends SettingRegistry {
     /**
      * WorldMap Main
      */
+    public final BooleanSetting nightModeSetting = register(
+        BooleanSetting.create(
+            "Night Mode",
+            "xaeroplus.setting.night_mode",
+            false),
+        SettingLocation.WORLD_MAP_MAIN);
     public final BooleanSetting transparentWorldmapBackgroundSetting = register(
         BooleanSetting.create(
             "Transparent WorldMap Background",

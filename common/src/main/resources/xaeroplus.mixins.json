@@ -37,6 +37,7 @@
     "MixinHudMod",
     "MixinImprovedFramebuffer",
     "MixinLeveledRegion",
+    "MixinMapDimension",
     "MixinMapPixel",
     "MixinMapProcessor",
     "MixinMapSaveLoad",
