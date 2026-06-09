@@ -1240,6 +1240,10 @@ public abstract class MixinGuiMap extends ScreenBase implements IRightClickableE
                 if (lavaColumns.isEnabled()) {
                     lavaColumns.lavaColumnsCache.get().removeHighlights(toRemove, dim);
                 }
+                var settledLava = ModuleManager.getModule(SettledLava.class);
+                if (settledLava.isEnabled()) {
+                    settledLava.settledLavaCache.get().removeHighlights(toRemove, dim);
+                }
             }
         });
 

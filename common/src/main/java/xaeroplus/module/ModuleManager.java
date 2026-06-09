@@ -29,6 +29,7 @@ public class ModuleManager {
             new PortalSkipDetection(),
             new RegionGrid(),
             new RenderDistance(),
+            new SettledLava(),
             new SpawnChunks(),
             new SpawnChunksPlayer(),
             new SpawnPoint(),

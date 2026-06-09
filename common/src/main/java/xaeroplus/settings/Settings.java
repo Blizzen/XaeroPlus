@@ -572,6 +572,40 @@ public final class Settings extends SettingRegistry {
             (b) -> ModuleManager.getModule(LavaColumns.class).setDiskCache(b),
             () -> ModuleManager.getModule(LavaColumns.class).isEnabled()),
         SettingLocation.CHUNK_HIGHLIGHTS);
+    public final BooleanSetting settledLavaEnabledSetting = register(
+        BooleanSetting.create(
+            "Settled Lava",
+            "xaeroplus.setting.settled_lava",
+            false,
+            true,
+            (b) -> ModuleManager.getModule(SettledLava.class).setEnabled(b)),
+        SettingLocation.CHUNK_HIGHLIGHTS);
+    public final BooleanSetting settledLavaSaveLoadToDisk = register(
+        BooleanSetting.create(
+            "Save/Load Settled Lava to Disk",
+            "xaeroplus.setting.settled_lava_save_load_to_disk",
+            true,
+            (b) -> ModuleManager.getModule(SettledLava.class).setDiskCache(b),
+            () -> ModuleManager.getModule(SettledLava.class).isEnabled()),
+        SettingLocation.CHUNK_HIGHLIGHTS);
+    public final DoubleSetting settledLavaAlphaSetting = register(
+        DoubleSetting.create(
+            "Settled Lava Opacity",
+            "xaeroplus.setting.settled_lava_opacity",
+            0, 255, 10,
+            200,
+            (b) -> ModuleManager.getModule(SettledLava.class).setAlpha(b),
+            () -> ModuleManager.getModule(SettledLava.class).isEnabled()),
+        SettingLocation.CHUNK_HIGHLIGHTS);
+    public final EnumSetting<ColorHelper.HighlightColor> settledLavaColorSetting = register(
+        EnumSetting.create(
+            "Settled Lava Color",
+            "xaeroplus.setting.settled_lava_color",
+            ColorHelper.HighlightColor.values(),
+            ColorHelper.HighlightColor.ORANGE,
+            (b) -> ModuleManager.getModule(SettledLava.class).setRgbColor(b.getColor()),
+            () -> ModuleManager.getModule(SettledLava.class).isEnabled()),
+        SettingLocation.CHUNK_HIGHLIGHTS);
     public final BooleanSetting oldBiomesSetting = register(
         BooleanSetting.create(
             "Old Biomes",
